@@ -21,7 +21,13 @@ mongoose
 	.then(() => console.log('connected to database'))
 	.catch((error) => console.log(`error connecting to Mongo: ${error}`));
 
-server.use(cors());
+const corsOptions = {
+	origin: '*',
+	credentials: true, //access-control-allow-credentials:true
+	optionSuccessStatus: 200,
+};
+
+server.use(cors(corsOptions));
 server.use(cookieParser());
 server.use(express.json());
 server.use(routes);
