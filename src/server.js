@@ -3,10 +3,8 @@ const express = require('express');
 const server = express();
 const cookieParser = require('cookie-parser');
 const cors = require('cors');
-const path = require('path');
 const mongoose = require('mongoose');
-
-const routes = require('./src/router');
+const routes = require('./router');
 const { ppid } = require('process');
 
 mongoose.Promise = global.Promise;
@@ -31,3 +29,5 @@ server.use(cors(corsOptions));
 server.use(cookieParser());
 server.use(express.json());
 server.use(routes);
+
+server.listen(process.env.PORT || 3000);
