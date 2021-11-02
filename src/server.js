@@ -4,6 +4,8 @@ const server = express();
 const cookieParser = require('cookie-parser');
 const cors = require('cors');
 const mongoose = require('mongoose');
+const morgan = require('morgan');
+
 const routes = require('./router');
 const { ppid } = require('process');
 
@@ -28,6 +30,8 @@ const corsOptions = {
 server.use(cors(corsOptions));
 server.use(cookieParser());
 server.use(express.json());
+server.use(morgan('dev'));
+
 server.use(routes);
 
 server.listen(process.env.PORT || 3000);
