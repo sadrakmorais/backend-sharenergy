@@ -33,6 +33,10 @@ $ npm install nodemon
 ```
 $ npm install path
 ```
+## morgan
+```
+$ npm install morgan
+```
 
 
 # ROTAS:
