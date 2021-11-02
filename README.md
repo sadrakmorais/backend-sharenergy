@@ -1,5 +1,8 @@
 # DOCUMENTAÇÃO
 
+## O Back-End utiliza conexão com um banco de dados NoSQL, o MongoDB
+
+
 # DEPENDÊNCIAS:
 
 ## cookie-parser
@@ -54,4 +57,10 @@ PUT /users/:userId : Atualiza um usuário
 
 ```
 DELETE /users/:userId : Deleta um usuário
+```
+# ACESSO REMOTO:
+
+## Deploy do Back-End feito utilizando Heroku, disponível no link :
+```
+https://backend-sharenergy.herokuapp.com
 ```
