@@ -8,27 +8,27 @@ $ npm install cookie-parser
 ```
 ## cors
 ```
-$ npm install cookie-parser
+$ npm install cors
 ```
 ## dotenv
 ```
-$ npm install cookie-parser
+$ npm install dotenv
 ```
 ## express
 ```
-$ npm install cookie-parser
+$ npm install express
 ```
 ## mongoose
 ```
-$ npm install cookie-parser
+$ npm install mongoose
 ```
 ## nodemon
 ```
-$ npm install cookie-parser
+$ npm install nodemon
 ```
 ## path
 ```
-$ npm install cookie-parser
+$ npm install path
 ```
 
 
