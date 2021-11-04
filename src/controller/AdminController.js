@@ -35,7 +35,7 @@ class AdminController {
 			const { adminId } = req.params;
 			const admin = await User.findOne({ _id: adminId });
 			if (!admin) {
-				throw errors.NOT_FOUND('usuário');
+				throw errors.NOT_FOUND('Administrador');
 			}
 
 			return res.status(200).json({ admin });
@@ -55,12 +55,12 @@ class AdminController {
 			const adminExists = admin ? true : false;
 
 			if (adminExists) {
-				throw errors.CONFLICT('já existe um usuário com esse CPF nesse curso');
+				throw errors.CONFLICT('Já existe um administrador com esse CPF no sistema');
 			}
 
 			const validationSchema = Yup.object().shape({
-				cpf: Yup.string().required('não informado'),
-				password: Yup.string().required('não informado'),
+				cpf: Yup.string().required('Não informado'),
+				password: Yup.string().required('Não informado'),
 			});
 
 			await validationSchema.validate(payload, { abortEarly: false });
@@ -91,7 +91,7 @@ class AdminController {
 			const admin = await Admin.findOne({ _id: adminId });
 
 			if (!admin) {
-				throw errors.NOT_FOUND('usuário');
+				throw errors.NOT_FOUND('Administrador');
 			}
 
 			await Admin.deleteOne({ _id: adminId });

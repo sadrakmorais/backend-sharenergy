@@ -6,7 +6,7 @@ const bcrypt = require('bcrypt');
 const errors = require('../lib/errors');
 
 class AuthController {
-	show = async (req, res) => res.status(200).json({ message: 'usuário autenticado' });
+	show = async (req, res) => res.status(200).json({ message: 'Administrador autenticado' });
 
 	store = async (req, res) => {
 		try {
@@ -19,7 +19,7 @@ class AuthController {
 
 			bcrypt.compare(password, admin.password, (err, passwordsMatch) => {
 				if (err || !passwordsMatch) {
-					return res.status(401).json({ message: 'senha incorreta' });
+					return res.status(401).json({ message: 'Senha incorreta' });
 				}
 
 				const auth = jwt.sign(`${admin} ${process.env.SECRET}`);
