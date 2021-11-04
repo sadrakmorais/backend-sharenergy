@@ -22,7 +22,7 @@ class AuthController {
 					return res.status(401).json({ message: 'Senha incorreta' });
 				}
 
-				const auth = jwt.sign(`${admin} ${process.env.SECRET}`);
+				const auth = jwt.sign({ admin }, process.env.SECRET);
 
 				return res.status(200).json({ admin, auth });
 			});
