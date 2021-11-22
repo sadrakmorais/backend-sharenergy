@@ -62,6 +62,14 @@ PUT /users/:userId : Atualiza um usuário
 ```
 DELETE /users/:userId : Deleta um usuário
 ```
+## Administradores:
+
+```
+GET /admins : Retorna todos os Administradores
+```
+```
+POST /users : Cria um novo Administrador
+```
 # ACESSO REMOTO:
 
 ## Deploy do Back-End feito utilizando Heroku, disponível no link :
